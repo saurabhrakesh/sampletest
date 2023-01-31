@@ -1,0 +1,27 @@
+name: Challenge
+on:
+  push:
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Greet User
+        run: echo welcome to action
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Test
+        run: echo welcome to test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Deploy
+        run: echo welcome to deploy
+        
