@@ -1,0 +1,14 @@
+name: CI
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: action/checkout@v3
+      - name: Greet User
+        run: echo welcome to action
+        
